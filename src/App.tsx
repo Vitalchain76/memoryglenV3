@@ -13,23 +13,21 @@ import Create from '@/pages/Create';
 export default function App() {
   return (
     <Layout>
-    <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/memorials" element={<Memorials />} />
-    <Route path="/memorials/example-memorial" element={<JohnPetersMemorial />} />
-    <Route path="/memorials/virginia-dadirayi-chiimba" element={<MemorialVirginia />} />
-    <Route path="/memorials/john-peters" element={<JohnPetersMemorial />} />
-    <Route path="/themes" element={<Themes />} />
-    <Route path="/funeral-parlours" element={<FuneralParlours />} />
-    <Route path="/funeral-parlours/register" element={<Navigate to="/funeral-parlours" replace />} />
-    <Route path="/burial-societies" element={<BurialSocieties />} />
-    <Route path="/plans" element={<Plans />} />
-    <Route path="/service-providers" element={<ServiceProviders />} />
-    <Route path="/create" element={<Create />} />
-    <Route path="*" element={<Memorials />} />
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/memorials" element={<Memorials />} />
+        <Route path="/memorials/example-memorial" element={<JohnPetersMemorial />} />
+        <Route path="/memorials/virginia-dadirayi-chiimba" element={<MemorialVirginia />} />
+        <Route path="/memorials/john-peters" element={<JohnPetersMemorial />} />
+        <Route path="/themes" element={<Themes />} />
+        <Route path="/funeral-parlours" element={<FuneralParlours />} />
+        <Route path="/funeral-parlours/register" element={<Navigate to="/funeral-parlours" replace />} />
+        <Route path="/burial-societies" element={<BurialSocieties />} />
+        <Route path="/plans" element={<Plans />} />
+        <Route path="/service-providers" element={<ServiceProviders />} />
+        <Route path="/create" element={<Create />} />
+        <Route path="*" element={<Memorials />} />
+      </Routes>
     </Layout>
-    );
+  );
 }
-    );
-}</Layout>
