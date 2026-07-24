@@ -247,7 +247,6 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <FoundingMemorial />
       <JohnDemoTabs />
       <RecentMemorials />
       <HowItWorks />
