@@ -16,23 +16,21 @@ import Reveal from '@/components/Reveal';
 import StatBand from '@/components/StatBand';
 import CandleFlame from '@/components/CandleFlame';
 import Hero from '@/pages/home/Hero';
-import JohnDemo from '@/pages/home/JohnDemo';
+import JohnDemoTabs from '@/pages/home/JohnDemoTabs';
+import RecentMemorials from '@/pages/home/RecentMemorials';
 import HowItWorks from '@/pages/home/HowItWorks';
 
 /* ---------- Section 2 — Founding Memorial ---------- */
 function FoundingMemorial() {
   const portraitRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: portraitRef, offset: ['start end', 'end start'] });
-  // Parallax: portrait scrolls at 0.96× (subtle 20px offset total)
   const y = useTransform(scrollYProgress, [0, 1], [10, -10]);
 
   return (
     <section className="section-pad" aria-labelledby="founding-heading">
       <div className="container-content grid items-center gap-12 lg:grid-cols-[55fr_45fr]">
-        {/* Portrait in parchment-matted frame */}
         <Reveal as="figure">
           <div ref={portraitRef} className="relative bg-[#FBF8F1] p-6 shadow-raised">
-            {/* Brass inner rule — draws on entry */}
             <motion.div
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
@@ -43,7 +41,7 @@ function FoundingMemorial() {
             />
             <motion.img
               src="/virginia-portrait.jpg"
-              alt="Portrait placeholder of Virginia Dadirayi Chiimba, an elderly Zimbabwean mother in a headscarf"
+              alt="Portrait of Virginia Dadirayi Chiimba, an elderly Zimbabwean mother in a headscarf"
               style={{ y }}
               className="aspect-[4/5] w-full object-cover"
               loading="lazy"
@@ -54,7 +52,6 @@ function FoundingMemorial() {
           </figcaption>
         </Reveal>
 
-        {/* Copy */}
         <div>
           <Reveal>
             <p className="eyebrow">OUR FOUNDING MEMORIAL</p>
@@ -66,7 +63,7 @@ function FoundingMemorial() {
           </Reveal>
           <Reveal delay={0.16}>
             <p className="type-quote mt-5 text-body">
-              “A loving, caring, strong, and deeply faithful mother. The heart of our family.”
+              &ldquo;A loving, caring, strong, and deeply faithful mother. The heart of our family.&rdquo;
             </p>
           </Reveal>
           <Reveal delay={0.24}>
@@ -132,93 +129,6 @@ function FeatureGrid() {
                 <h3 className="type-h3 mt-4 text-body">{title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-soft">{body}</p>
               </div>
-            </Reveal>
-          ))}
-        </ul>
-      </div>
-    </section>
-  );
-}
-
-/* ---------- Section 6 — The Five Tabs teaser ---------- */
-const FIVE_TABS = [
-  {
-    title: 'The Journey',
-    line: 'From the moment the news arrives to the moment they rest.',
-    img: '/john-life-6.jpg',
-    href: '/memorials/john-peters?tab=journey',
-  },
-  {
-    title: 'The Memorial',
-    line: 'Story, gallery, voice, song, candles.',
-    img: '/john-life-2.jpg',
-    href: '/memorials/john-peters?tab=memorial',
-  },
-  {
-    title: 'Family Glen',
-    line: "Your family's own cemetery, designed by you.",
-    img: '/glen-grove-earthly.jpg',
-    href: '/memorials/john-peters?tab=glen',
-  },
-  {
-    title: 'Family Tree',
-    line: 'Woven as you add the people you love.',
-    img: null, // tree motif
-    href: '/memorials/john-peters?tab=tree',
-  },
-  {
-    title: 'Living Legacy',
-    line: 'Decide how the world remembers you.',
-    img: '/living-legacy-hero.jpg',
-    href: '/memorials/john-peters?tab=legacy',
-  },
-];
-
-function FiveTabs() {
-  return (
-    <section className="section-pad bg-forest" aria-labelledby="five-tabs-heading">
-      <div className="container-content">
-        <Reveal>
-          <p className="eyebrow !text-sage">THE FIVE-ROOM MEMORIAL</p>
-          <h2 id="five-tabs-heading" className="type-h2 mt-4 text-bone">
-            One memorial. Five rooms.
-          </h2>
-        </Reveal>
-        <ul className="mt-14 grid snap-x snap-mandatory grid-flow-col gap-6 overflow-x-auto pb-4 [grid-auto-columns:80%] sm:[grid-auto-columns:46%] lg:grid-flow-row lg:grid-cols-5 lg:overflow-visible lg:[grid-auto-columns:unset]">
-          {FIVE_TABS.map((tab, i) => (
-            <Reveal as="li" key={tab.title} delay={i * 0.1} className="snap-start">
-              <Link
-                to={tab.href}
-                className="group flex h-full flex-col rounded-sm border border-brass/30 bg-forest-deep p-3 transition-colors duration-300 hover:border-brass"
-              >
-                <div className="aspect-[3/4] overflow-hidden rounded-sm">
-                  {tab.img ? (
-                    <img
-                      src={tab.img}
-                      alt=""
-                      loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
-                    />
-                  ) : (
-                    <div className="flex h-full w-full items-center justify-center bg-forest-soft">
-                      <img
-                        src="/logo-mark.svg"
-                        alt=""
-                        width={96}
-                        height={96}
-                        className="transition-transform duration-300 group-hover:scale-[1.03]"
-                      />
-                    </div>
-                  )}
-                </div>
-                <div className="flex flex-1 flex-col p-3">
-                  <h3 className="font-display text-xl text-bone">{tab.title}</h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-sage">{tab.line}</p>
-                  <span className="link-arrow mt-4 !text-brass-soft">
-                    Explore <ArrowRight size={14} aria-hidden />
-                  </span>
-                </div>
-              </Link>
             </Reveal>
           ))}
         </ul>
@@ -304,7 +214,6 @@ function ClosingCta() {
   return (
     <section ref={ref} className="section-pad" aria-labelledby="closing-heading">
       <div className="container-content flex flex-col items-center text-center">
-        {/* The one signature flourish — the flame ignites on entry */}
         <motion.div
           initial={{ scale: 0, opacity: 0 }}
           animate={ignited ? { scale: 1, opacity: 1 } : {}}
@@ -333,16 +242,16 @@ function ClosingCta() {
   );
 }
 
-/** Home — `/` (home.md). Parchment by day / Dusk after sunset; no provider rail. */
+/** Home — the landing page. */
 export default function Home() {
   return (
     <>
       <Hero />
       <FoundingMemorial />
-      <JohnDemo />
+      <JohnDemoTabs />
+      <RecentMemorials />
       <HowItWorks />
       <FeatureGrid />
-      <FiveTabs />
       <HomeStats />
       <PartnerBands />
       <ClosingCta />
