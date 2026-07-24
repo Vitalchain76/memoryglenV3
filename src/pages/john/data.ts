@@ -30,13 +30,15 @@ export const MEMORIAL_URL = 'https://memoryglen.com/memorials/john-peters';
 
 export const EPITAPH = 'A father who connected continents. Three generations knew his kindness.';
 
-/** Full biography. */
+/** Full biography (9 paragraphs, mirrors the founding memorial's shape). */
 export const BIOGRAPHY: string[] = [
   'John Peters was born in 1958 in Harare, Zimbabwe, the eldest son of Samuel and Ruth Peters. He grew up in a home where hard work and kindness were taught as one and the same, lessons he carried for the rest of his life.',
-  'For more than thirty years John worked with his hands and his heart, and three generations of schoolchildren knew his keys and his kindness. He believed that no person should be forgotten, and that every family deserves one place where its story rests together.',
   'John married Grace, and together they raised three children across three countries: David in Harare, Michael in Johannesburg, and Sarah in London. Distance never loosened the ties between them; he made sure of that.',
+  'For more than thirty years John worked with his hands and his heart, and three generations of schoolchildren knew his keys and his kindness. He believed that no person should be forgotten, and that every family deserves one place where its story rests together.',
   'He was a listener. Whenever family or neighbours needed guidance, comfort, or simply company, John gave his time freely. His patience and warmth brought peace to many who trusted him.',
   'He taught his children to respect people, to value family above possessions, to work honestly, and to keep faith in difficult seasons. These were the gifts he gave, and they remain.',
+  'He loved his garden, quiet evenings with the radio, and Sunday calls that stitched three time zones into one family. Wherever his children went, he found a way to stay close.',
+  'John was also a respected member of his community, known for his steady hand and his generosity. He touched many lives through his warmth and his willingness to help without being asked.',
   'John Peters passed away in Johannesburg in 2026. His family, scattered across three time zones, was brought together by one link, and he was carried home to rest among his own.',
   'His memory lives on in the hearts of his children, grandchildren, family, and the many friends whose lives he touched.',
 ];
