@@ -1,8 +1,7 @@
 import { useRef, useState } from 'react';
 import { Link } from 'react-router';
-import { motion, useInView, useScroll, useTransform } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import {
-  ArrowRight,
   BookOpen,
   Flame,
   Images,
@@ -19,81 +18,6 @@ import Hero from '@/pages/home/Hero';
 import JohnDemoTabs from '@/pages/home/JohnDemoTabs';
 import RecentMemorials from '@/pages/home/RecentMemorials';
 import HowItWorks from '@/pages/home/HowItWorks';
-
-/* ---------- Section 2 — Founding Memorial ---------- */
-function FoundingMemorial() {
-  const portraitRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: portraitRef, offset: ['start end', 'end start'] });
-  const y = useTransform(scrollYProgress, [0, 1], [10, -10]);
-
-  return (
-    <section className="section-pad" aria-labelledby="founding-heading">
-      <div className="container-content grid items-center gap-12 lg:grid-cols-[55fr_45fr]">
-        <Reveal as="figure">
-          <div ref={portraitRef} className="relative bg-[#FBF8F1] p-6 shadow-raised">
-            <motion.div
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true, margin: '-20% 0px' }}
-              transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
-              className="absolute inset-3 origin-left border border-brass"
-              aria-hidden
-            />
-            <motion.img
-              src="/virginia-portrait.jpg"
-              alt="Portrait of Virginia Dadirayi Chiimba, an elderly Zimbabwean mother in a headscarf"
-              style={{ y }}
-              className="aspect-[4/5] w-full object-cover"
-              loading="lazy"
-            />
-          </div>
-          <figcaption className="type-meta mt-4 text-soft">
-            Seke, Chitungwiza · 7 June 1955 — 19 May 2025
-          </figcaption>
-        </Reveal>
-
-        <div>
-          <Reveal>
-            <p className="eyebrow">OUR FOUNDING MEMORIAL</p>
-          </Reveal>
-          <Reveal delay={0.08}>
-            <h2 id="founding-heading" className="type-h2 mt-4 text-body">
-              Virginia Dadirayi Chiimba
-            </h2>
-          </Reveal>
-          <Reveal delay={0.16}>
-            <p className="type-quote mt-5 text-body">
-              &ldquo;A loving, caring, strong, and deeply faithful mother. The heart of our family.&rdquo;
-            </p>
-          </Reveal>
-          <Reveal delay={0.24}>
-            <p className="type-story mt-5 max-w-xl text-soft">
-              MemoryGlen began with one family's love. This platform was built to honour our
-              founder's mother — her voice notes, her hymns, her photographs, her resting place in
-              Seke, Zinganga. Everything we build for your family, we first built for ours.
-            </p>
-          </Reveal>
-          <Reveal delay={0.32}>
-            <StatBand
-              className="mt-8"
-              stats={[
-                { value: '12', label: 'Candles' },
-                { value: '2', label: 'Tributes' },
-                { value: '13', label: 'Media' },
-                { value: '25', label: 'Family' },
-              ]}
-            />
-          </Reveal>
-          <Reveal delay={0.4}>
-            <Link to="/memorials/virginia-dadirayi-chiimba" className="link-arrow mt-8 inline-flex">
-              Visit Her Memorial <ArrowRight size={16} aria-hidden />
-            </Link>
-          </Reveal>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 /* ---------- Section 5 — Feature grid ---------- */
 const FEATURES = [
