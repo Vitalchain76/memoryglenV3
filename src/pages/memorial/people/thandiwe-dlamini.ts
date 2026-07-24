@@ -21,7 +21,7 @@ const data: MemorialData = {
     'Thandiwe Dlamini passed away in 2025, leaving behind a family and community that loved her dearly. Though she is gone, her lessons, her laughter, and her love remain with all who knew her.',
   ],
   tributes: [
-    { name: 'David', relation: 'Daughter', quote: 'You were our anchor and our calm in every storm. Everything I am, I owe to your love and your example.' },
+    { name: 'David', relation: 'Son', quote: 'You were our anchor and our calm in every storm. Everything I am, I owe to your love and your example.' },
     { name: 'Tariro', relation: 'Grandchild', quote: 'Gogo, your stories and your prayers will stay with me forever. I will live in a way that makes you proud.' },
     { name: 'Joseph', relation: 'Friend', quote: 'For many years you were the truest friend a person could ask for. The world is quieter without you.' },
     { name: 'Grace', relation: 'Community', quote: 'Your kindness knew no limits. You welcomed everyone with open arms and a warm meal.' },
@@ -40,12 +40,12 @@ const data: MemorialData = {
     'For you live forever in our hearts.',
   ],
   gallery: [
-    { src: '/john-life-1.jpg', caption: 'A gathering of family, everyone together' },
-    { src: '/john-life-2.jpg', caption: 'A quiet morning at home' },
-    { src: '/john-life-3.jpg', caption: 'Celebrating a milestone with loved ones' },
-    { src: '/john-life-4.jpg', caption: 'Sunday best, ready for church' },
-    { src: '/john-life-5.jpg', caption: 'Among friends and neighbours' },
-    { src: '/john-life-6.jpg', caption: 'A treasured everyday moment' },
+    { src: '/thandiwe-life-1.jpg', caption: 'A gathering of family, everyone together' },
+    { src: '/thandiwe-life-2.jpg', caption: 'A quiet morning at home' },
+    { src: '/thandiwe-life-3.jpg', caption: 'Celebrating a milestone with loved ones' },
+    { src: '/thandiwe-life-4.jpg', caption: 'Sunday best, ready for church' },
+    { src: '/thandiwe-life-5.jpg', caption: 'Among friends and neighbours' },
+    { src: '/thandiwe-life-6.jpg', caption: 'A treasured everyday moment' },
   ],
   galleryCaption: 'A collection of precious moments captured with Thandiwe over the years \u2014 family gatherings, celebrations, and quiet everyday joys.',
   restingPlace: { title: 'Johannesburg, South Africa', copy: 'Thandiwe Dlamini was laid to rest in Johannesburg, the community she called home. The grave stands as a quiet place of remembrance where family and friends can visit and reflect.' },
@@ -69,8 +69,8 @@ const data: MemorialData = {
   ],
   candles: 201,
   providers: [
-    { name: 'Eternal Stone Tombstones', category: 'Tombstone Maker', description: 'Granite headstones and memorials, crafted and engraved in Harare.' },
-    { name: 'Msasa Florists', category: 'Florist', description: 'Wreaths and grave flowers, Harare and surrounds.' },
+    { name: 'Eternal Stone Tombstones', category: 'Tombstone Maker', description: 'Granite headstones and memorials, crafted and engraved in Johannesburg.' },
+    { name: 'Msasa Florists', category: 'Florist', description: 'Wreaths and grave flowers, Johannesburg and surrounds.' },
     { name: 'Glen View Catering', category: 'Caterer', description: 'Funeral catering across the region.' },
   ],
 };
