@@ -3,7 +3,7 @@ import Layout from '@/components/Layout';
 import Home from '@/pages/Home';
 import Memorials from '@/pages/Memorials';
 import MemorialVirginia from '@/pages/MemorialVirginia';
-import JohnPetersMemorial from '@/pages/JohnPetersMemorial';
+import JohnMemorial from '@/pages/JohnMemorial';
 import Themes from '@/pages/Themes';
 import FuneralParlours from '@/pages/FuneralParlours';
 import BurialSocieties from '@/pages/BurialSocieties';
@@ -16,9 +16,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/memorials" element={<Memorials />} />
-        <Route path="/memorials/example-memorial" element={<JohnPetersMemorial />} />
+        <Route path="/memorials/example-memorial" element={<JohnMemorial />} />
         <Route path="/memorials/virginia-dadirayi-chiimba" element={<MemorialVirginia />} />
-        <Route path="/memorials/john-peters" element={<JohnPetersMemorial />} />
+        <Route path="/memorials/john-peters" element={<JohnMemorial />} />
         <Route path="/themes" element={<Themes />} />
         <Route path="/funeral-parlours" element={<FuneralParlours />} />
         <Route path="/funeral-parlours/register" element={<Navigate to="/funeral-parlours" replace />} />
